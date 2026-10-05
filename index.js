@@ -19,8 +19,8 @@ const pool = new Pool({
 })
 
 app.get('/', (req, res, next) => {
-    console.loog("TEST DATA :");
-    pool.quary('Select * form biodata')
+    console.log("TEST DATA :");
+    pool.query('Select * from biodata')
         .then(tesData => {
             res.send(tesData.rows)
         })
